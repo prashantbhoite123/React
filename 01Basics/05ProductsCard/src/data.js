@@ -84,4 +84,20 @@ export const Data = [
     imgsrc:
       "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/n/o/s/-original-imaghzah9mjvukjz.jpeg?q=70",
   },
+  {
+    productname:
+      "HP 360 Intel Celeron Quad Core N4120 - (4 GB/64 GB EMMC Storage/Chrome OS) 14a-ca0504TU Chromebook  (14 Inch, Forest Teal, 1.49 Kg)",
+    brandName: "HP",
+    price: {
+      originalprice: " ₹55,990",
+      descPrice: "₹69,990 ",
+    },
+    details: {
+      processor: "Intel Core i5",
+      Ram: "16 GB",
+      storage: "512 GB",
+    },
+    imgsrc:
+      "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/n/o/s/-original-imaghzah9mjvukjz.jpeg?q=70",
+  },
 ]

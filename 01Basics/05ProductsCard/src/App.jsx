@@ -7,9 +7,9 @@ function App() {
 
   return (
     <>
-      <div className="flex flex-wrap gap-5 items-center">
-        {Data.map((card) => (
-          <Card card={card} key={Math.random()} />
+      <div className="grid gap-6 items-center justify-center p-5 md:p-10 h-auto w-full sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+        {Data.map((card, index) => (
+          <Card card={card} key={index} />
         ))}
       </div>
     </>
