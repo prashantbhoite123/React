@@ -6,7 +6,9 @@ function App() {
   return (
     <>
       <UserContaxtProvoider>
-        <h1 className="bg-purple-500 text-2xl">Prashant Balasaheb Bhoite</h1>
+        <h1 className="text-center mt-3 font-semibold text-xl text-emerald-600">
+          Mini_Contacts
+        </h1>
         <Login />
         <Profile />
       </UserContaxtProvoider>
