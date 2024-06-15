@@ -5,6 +5,7 @@ const initialState = {
   todosArr: [],
 }
 
+
 const TodoSlice = createSlice({
   name: "todos",
   initialState,
@@ -38,7 +39,7 @@ const TodoSlice = createSlice({
     updateTodo: (state, action) => {
       state.todosArr = state.todosArr.map((todo) =>
         todo._id === action.payload._id
-          ? { ...todo, todoMsg: action.payload.message }
+          ? { ...todo, todoMsg: action.payload.todoMsg }
           : todo
       )
     },

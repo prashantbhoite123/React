@@ -1,10 +1,13 @@
-import React from "react"
-import TodoForm from "./components/TodoForm"
+import { useState } from "react"
+import TodoForm from "./components/TodoFrom.jsx"
+import TodoItem from "./components/TodoItem.jsx"
 import { useSelector } from "react-redux"
-import TodoItem from "./components/TodoItem"
+import { Toaster } from "react-hot-toast"
+import "./App.css"
 
-const App = () => {
-  const todos = useSelector((state) => state.todosArr)
+function App() {
+  const todos = useSelector((state) => state.todoArry)
+  console.log(todos)
 
   return (
     <div className="bg-[#172842] min-h-screen py-8">

@@ -1,19 +1,39 @@
 import { useState } from "react"
 import { removeTodo, toggleTodo, updateTodo } from "../app/Todo/TodoSlice"
 import { useDispatch } from "react-redux"
+import toast from "react-hot-toast"
 
 function TodoItem({ todo }) {
   const dispatch = useDispatch()
   const [isTodoEditable, setIsTodoEditable] = useState(false)
-  const [todoMsg, settodoMsg] = useState(todo.todoMsg)
+  const [newTodoMsg, settodoMsg] = useState(todo.todoMsg)
 
   const toggleisComplete = () => {
     dispatch(toggleTodo(todo._id))
   }
 
-  console.log(todoMsg)
   const editTodo = () => {
-    setIsTodoEditable(false)
+    if (newTodoMsg === "") {
+      return toast.error("Enter Valid input", {
+        duration: 3000,
+        style: {
+          backgroundColor: "black",
+          color: "white",
+          padding: "4px",
+        },
+      })
+    } else {
+      dispatch(updateTodo({ ...todo, todoMsg: newTodoMsg }))
+      setIsTodoEditable(false)
+      toast.success("Your Todo Added", {
+        duration: 3000,
+        style: {
+          backgroundColor: "black",
+          color: "white",
+          padding: "4px",
+        },
+      })
+    }
   }
 
   return (
@@ -33,7 +53,7 @@ function TodoItem({ todo }) {
         className={`border outline-none w-full bg-transparent rounded-lg ${
           isTodoEditable ? "border-black/10 px-2" : "border-transparent"
         } ${todo.isComplete ? "line-through" : ""}`}
-        value={todoMsg}
+        value={newTodoMsg}
         defaultValue={todo.todoMsg}
         onChange={(e) => settodoMsg(e.target.value)}
         readOnly={!isTodoEditable}

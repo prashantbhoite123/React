@@ -1,18 +1,34 @@
 import { useState } from "react"
 import { useDispatch } from "react-redux"
 import { addTodo } from "../app/Todo/TodoSlice"
+import toast, { Toaster } from "react-hot-toast"
 
 function TodoForm() {
   const [input, setinput] = useState("")
   const disptch = useDispatch()
 
   const handleSubmit = (e) => {
-    if (input !== "") {
-      e.preventDefault()
+    e.preventDefault()
+    if (input.trim() !== "") {
       disptch(addTodo(input))
-      setinput("")  
+      setinput("")
+      toast.success("Your Todo Added", {
+        duration: 3000,
+        style: {
+          backgroundColor: "black",
+          color: "white",
+          padding: "4px",
+        },
+      })
     } else {
-      alert("add Your Todo")
+      toast.error("Enter Valid inpute here ..", {
+        duration: 3000,
+        style: {
+          backgroundColor: "black",
+          color: "white",
+          padding: "4px",
+        },
+      })
     }
   }
 
