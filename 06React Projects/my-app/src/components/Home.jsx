@@ -11,12 +11,15 @@ import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import img1 from '../assets/one.jpg';
-import img2 from '../assets/two2.jpg';
-import img3 from '../assets/three3.jpg';
+
 import vg from '../assets/3dMenImage.png';
+import tech1 from '../assets/technowlogyImage.jpg';
+import tech2 from '../assets/technowlogyimage2.jpg';
 
 const headingContent = {
   pos: 'absolute',
+
+  Flex: 'Flex',
   left: '50%',
   right: '50%',
   transform: 'translate(-50%,-50%)',
@@ -58,7 +61,7 @@ function Home() {
             Earum, odio. Id? Lorem ipsum dolor sit amet, consectetur adipisicing
             elit. Aperiam rerum repellendus, aliquid dolorum id repellat
             praesentium quis nihil enim quisquam dicta vero, porro beatae itaque
-            blanditiis modi. Ratione, 
+            blanditiis modi. Ratione,
           </Text>
         </Stack>
       </Container>
@@ -83,14 +86,14 @@ const MyCarousel = () => (
     </Box>
 
     <Box w={'full'} h={'100vh'}>
-      <Img src={img2} />
+      <Img src={tech1} />
       <Heading bgColor={'blackAlpha.600'} color={'white'} {...headingContent}>
         Feature in programmingf
       </Heading>
     </Box>
 
     <Box w={'full'} h={'100vh'}>
-      <Img src={img3} />
+      <Img src={tech2} />
       <Heading bgColor={'blackAlpha.600'} color={'white'} {...headingContent}>
         Watch the feature
       </Heading>

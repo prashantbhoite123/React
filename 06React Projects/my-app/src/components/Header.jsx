@@ -25,6 +25,7 @@ function Header() {
         p={'0'}
         w={'10'}
         h={'10'}
+        zIndex={'overlay'}
         borderRadius={'full'}
         top={'4'}
         left={'4'}

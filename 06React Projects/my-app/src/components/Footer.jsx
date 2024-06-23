@@ -43,7 +43,7 @@ function Footer() {
           borderLeft={['none', '1px solid white']}
           borderRight={['none', '1px solid white']}
         >
-          <Heading textTransform={'uppercase'} textAlign={'center'}>
+          <Heading textTransform={'uppercase'} textAlign={['center', 'left']}>
             VIDEO HUB
           </Heading>
           <Text>All Right received</Text>
